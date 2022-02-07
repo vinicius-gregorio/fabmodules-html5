@@ -85,7 +85,7 @@ function setup(options, callback) {
 // Entrypoint for when used as script/executable
 function main() {
   var options = {
-    port: 'process.env.PORT || 5000',
+    port: process.env.PORT || 5000,
     allowedAddress: '0.0.0.0'
   };
 
