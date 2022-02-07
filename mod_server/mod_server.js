@@ -91,7 +91,7 @@ function main() {
 
   setup(options, function(err) {
     if (err) throw err
-    console.log("listening for connections from " + options.allowedAddress + " on " + options.port);
+    console.log("listening for connections from " + options.allowedAddress);
   });
 }
 
