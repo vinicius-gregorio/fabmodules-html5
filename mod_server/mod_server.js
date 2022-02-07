@@ -85,13 +85,13 @@ function setup(options, callback) {
 // Entrypoint for when used as script/executable
 function main() {
   var options = {
-    port: '12345',
-    allowedAddress: '127.0.0.1'
+    port: 'process.env.PORT || 5000',
+    allowedAddress: '0.0.0.0'
   };
 
   setup(options, function(err) {
     if (err) throw err
-    console.log("listening for connections from " + options.allowedAddress);
+    console.log("listening for connections from " + options.allowedAddress + " on " + options.port);
   });
 }
 
